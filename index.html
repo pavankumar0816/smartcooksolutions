@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cook Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Logo, Login, and Logout -->
+    <header>
+        <div class="header-container">
+            <img src="logo.jpg" alt="Smart Cook Solutions Logo" class="logo">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="products.html">Products</a>
+                <a href="#contact">Contact</a>
+                <a href="#" id="login-link">Login</a>
+                <a href="#" id="logout-link" style="display: none;">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Homepage Section (Starting Page) -->
+    <section class="home-section" id="home">
+        <div class="video-container">
+            <h1>Welcome to Smart Cook Solutions</h1>
+            <p>Innovative cooking solutions for the modern kitchen</p>
+            <video width="600" controls>
+                <source src="smart-vessel-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h2>About Us</h2>
+        <p>Smart Cook Solutions is dedicated to revolutionizing the kitchen with innovative technology. Our mission is to empower entrepreneurs and home cooks with smart, efficient tools like the Smart Vessel, blending creativity with convenience.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us!</p>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Login</button>
+                <p><a href="#" id="forgot-password-link">Forgot Password?</a> | <a href="#" id="register-link">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Reset Password</h2>
+            <form id="forgot-password-form">
+                <label for="forgot-email">Email:</label>
+                <input type="email" id="forgot-email" required>
+                <button type="submit">Reset Password</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Smart Cook Solutions. All rights reserved.</p>
+        <div class="social-links">
+            <a href="Smartcooksolutions21@gmail.com" target="_blank" class="social-icon gmail">Gmail</a>
+            <a href="https://www.instagram.com/smart_cook_solutions?igsh=MXZrb2R3ODI3ODVkdQ== " target="_blank" class="social-icon instagram">Instagram</a>
+            <a href="https://www.linkedin.com/company/smartcooksolutions" target="_blank" class="social-icon linkedin">LinkedIn</a>
+            <a href="tel:+917386377489" class="social-icon phone">+91 7386377489</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

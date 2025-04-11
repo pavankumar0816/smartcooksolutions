@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cook Solutions - Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Logo, Login, and Logout -->
+    <header>
+        <div class="header-container">
+            <img src="logo.jpg" alt="Smart Cook Solutions Logo" class="logo">
+            <nav>
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="products.html">Products</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="#" id="login-link">Login</a>
+                <a href="#" id="logout-link" style="display: none;">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="product-container">
+            <h1>Our Products</h1>
+            <div class="product-card" data-product-id="1">
+                <img src="smart-vessel.jpg" alt="Smart Vessel">
+                <h3>Smart Vessel</h3>
+                <p>A revolutionary cooking device for smart kitchens.</p>
+                <p>Price: ₹999</p>
+                <button class="add-to-cart btn">Add to Cart</button>
+                <button class="buy btn">Buy Now</button>
+            </div>
+            <div class="product-card" data-product-id="2">
+                <img src="smart-pan.jpg" alt="Smart Pan">
+                <h3>Smart Pan</h3>
+                <p>A versatile pan with smart heating technology.</p>
+                <p>Price: ₹1499</p>
+                <button class="add-to-cart btn">Add to Cart</button>
+                <button class="buy btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <button id="proceed-to-payment">Proceed to Payment</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Payment</h2>
+            <form id="payment-form">
+                <div class="payment-methods">
+                    <label><input type="radio" name="payment-method" value="card" checked> Credit/Debit Card</label>
+                    <label><input type="radio" name="payment-method" value="upi"> UPI</label>
+                    <label><input type="radio" name="payment-method" value="netbanking"> Internet Banking</label>
+                </div>
+
+                <!-- Card Payment Fields -->
+                <div id="card-fields" class="payment-fields">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                    <label for="expiry">Expiry Date:</label>
+                    <input type="text" id="expiry" placeholder="MM/YY" required>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" placeholder="123" required>
+                </div>
+
+                <!-- UPI Payment Fields -->
+                <div id="upi-fields" class="payment-fields" style="display: none;">
+                    <label for="upi-id">UPI ID:</label>
+                    <input type="text" id="upi-id" placeholder="example@upi" required>
+                </div>
+
+                <!-- Internet Banking Fields -->
+                <div id="netbanking-fields" class="payment-fields" style="display: none;">
+                    <label for="bank-select">Select Bank:</label>
+                    <select id="bank-select" required>
+                        <option value="">-- Select Bank --</option>
+                        <option value="sbi">State Bank of India</option>
+                        <option value="hdfc">HDFC Bank</option>
+                        <option value="icici">ICICI Bank</option>
+                        <option value="axis">Axis Bank</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="pay-now">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Smart Cook Solutions. All rights reserved.</p>
+        <div class="social-links">
+            <a href="Smartcooksolutions21@gmail.com" target="_blank" class="social-icon gmail">Gmail</a>
+            <a href="https://www.instagram.com/smart_cook_solutions?igsh=MXZrb2R3ODI3ODVkdQ== " target="_blank" class="social-icon instagram">Instagram</a>
+            <a href="https://www.linkedin.com/company/smartcooksolutions" target="_blank" class="social-icon linkedin">LinkedIn</a>
+            <a href="tel:+917386377489" class="social-icon phone">+91 73863 77489</a>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+</body>
+</html>
